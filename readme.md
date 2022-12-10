@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="WeFit" height="300px" title="WeFit" src=".github/images/logo.png" />
+  <img alt="WeFit" height="300" title="WeFit" src=".github/images/logo.png" />
 </h1>
 
 ## 💻 Projeto
