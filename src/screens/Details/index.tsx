@@ -13,6 +13,9 @@ import {
   Header,
   BackButtonContainer,
   BackButton,
+  TitleWrapper,
+  OwnerName,
+  RepositoryName,
   TitleHeader,
   Content,
   DetailsContainer,
@@ -54,6 +57,9 @@ export function Details() {
   const route = useRoute();
 
   const { repositoryData } = route.params as Params;
+
+  const ownerName = repositoryData.full_name.split('/')[0];
+  const repositoryName = repositoryData.full_name.split('/')[1];
 
   const [isFavorite, setIsFavorite] = useState(repositoryData.favoritedRepository);
 
@@ -111,10 +117,15 @@ export function Details() {
 
       <Content>
         <DetailsContainer>
-          <Title>{repositoryData.full_name}</Title>
+
+          <TitleWrapper>
+            <OwnerName>{`${ownerName}/`}</OwnerName>
+
+            <RepositoryName>{repositoryName}</RepositoryName>
+          </TitleWrapper>
 
           <Description>
-            {repositoryData.description}
+            {repositoryData.description ?? 'Não há descrição nesse repositório'}
           </Description>
 
           <StackContainer>

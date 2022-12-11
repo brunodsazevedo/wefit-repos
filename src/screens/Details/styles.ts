@@ -46,6 +46,22 @@ export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.text_primary};
 `;
 
+export const TitleWrapper = styled.View`
+  flex-direction: row;
+`;
+
+export const OwnerName = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.regular};
+  font-size: ${RFValue(20)}px;
+  color: ${({ theme }) => theme.colors.text_primary};
+`;
+
+export const RepositoryName = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.bold};
+  font-size: ${RFValue(20)}px;
+  color: ${({ theme }) => theme.colors.text_primary};
+`;
+
 export const Description = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size: ${RFValue(16)}px;
